@@ -1,0 +1,17 @@
+{
+  "name": "campussync-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "build:frontend": "npm run build --workspace=client",
+    "build": "npm run build:frontend",
+    "dev": "npm run build:frontend && node server/server.js",
+    "start": "node server/server.js",
+    "lint": "npm run lint --workspace=client"
+  }
+}
